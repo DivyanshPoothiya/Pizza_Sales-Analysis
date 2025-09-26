@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza Sales Analysis - SQL Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #d62828;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+    }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #003049;
+      margin-top: 40px;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003049;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1> Pizza Sales Analysis – SQL Project</h1>
+  <p>By [Your Name] | Powered by GitHub Pages</p>
+</header>
+
+<section>
+  <h2 Project Overview</h2>
+  <p>This project uses SQL to analyze pizza sales data and extract actionable business insights. It covers sales, popular items, time-based trends, and revenue breakdown.</p>
+
+  <h2>🔍 Key Analysis</h2>
+  <ul>
+    <li>Total orders and revenue</li>
+    <li>Most popular pizza types and sizes</li>
+    <li>Sales distribution by hour and category</li>
+    <li>Top 3 pizzas by revenue</li>
+    <li>Revenue percentage by pizza category</li>
+  </ul>
+
+  <h2> Sample Query</h2>
+  <pre><code>
+SELECT ROUND(SUM(order_details.quantity * pizzas.price), 2) AS total_pizza_sales
+FROM order_details
+JOIN pizzas ON pizzas.pizza_id = order_details.pizza_id;
+  </code></pre>
+
+  <h2>About the Project</h2>
+  <p>This analysis demonstrates how SQL can be used in real-world business scenarios for performance reporting and data-driven decisions.</p>
+
+  <h2>📎 View on GitHub</h2>
+  <p><a href="https://github.com/yourusername/pizza-sales-sql" target="_blank">Click here to view the full repository</a></p>
+</section>
+
+<footer>
+  Made by  [Divyansh Poothiya]
+</footer>
+
+</body>
+</html>
