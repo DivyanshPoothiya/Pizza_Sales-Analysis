@@ -5,79 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pizza Sales Analysis - SQL Project</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f9fc;
+    * {
       margin: 0;
       padding: 0;
-      color: #333;
+      box-sizing: border-box;
     }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+      animation: fadeIn 1.5s ease-in;
+    }
+
     header {
-      background-color: #d62828;
-      color: white;
-      padding: 20px 30px;
+      background-color: #1e293b;
+      padding: 30px 20px;
       text-align: center;
+      border-bottom: 2px solid #334155;
     }
+
+    header h1 {
+      font-size: 2em;
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
     section {
-      padding: 30px;
       max-width: 900px;
       margin: auto;
+      padding: 40px 20px;
     }
+
     h2 {
-      color: #003049;
+      color: #38bdf8;
       margin-top: 40px;
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
     }
-    code {
-      background-color: #eee;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
     }
+
+    code, pre {
+      background-color: #1e293b;
+      padding: 10px;
+      display: block;
+      border-radius: 6px;
+      margin-top: 10px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
+      background: #1e293b;
       text-align: center;
       padding: 20px;
-      background: #003049;
-      color: white;
+      font-size: 14px;
       margin-top: 40px;
+      border-top: 2px solid #334155;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1> Pizza Sales Analysis – SQL Project</h1>
-  <p>By [Your Name] | Powered by GitHub Pages</p>
+  <h1> Pizza Sales Analysis</h1>
+  <p>SQL Project by <strong>[Your Name]</strong> | Hosted on GitHub Pages</p>
 </header>
 
 <section>
-  <h2 Project Overview</h2>
-  <p>This project uses SQL to analyze pizza sales data and extract actionable business insights. It covers sales, popular items, time-based trends, and revenue breakdown.</p>
+  <h2> Project Overview</h2>
+  <p>This project uses SQL to explore pizza sales data and answer business questions like total revenue, popular pizzas, and order trends.</p>
 
   <h2>🔍 Key Analysis</h2>
   <ul>
-    <li>Total orders and revenue</li>
-    <li>Most popular pizza types and sizes</li>
-    <li>Sales distribution by hour and category</li>
-    <li>Top 3 pizzas by revenue</li>
-    <li>Revenue percentage by pizza category</li>
+    <li>Total Orders & Revenue</li>
+    <li>Popular Pizza Sizes and Types</li>
+    <li>Hourly Order Distribution</li>
+    <li>Top Revenue-Generating Pizzas</li>
+    <li>Revenue by Pizza Category</li>
   </ul>
 
-  <h2> Sample Query</h2>
+  <h2> Sample SQL Query</h2>
   <pre><code>
+-- Total Revenue from Pizza Sales
 SELECT ROUND(SUM(order_details.quantity * pizzas.price), 2) AS total_pizza_sales
 FROM order_details
 JOIN pizzas ON pizzas.pizza_id = order_details.pizza_id;
   </code></pre>
 
-  <h2>About the Project</h2>
-  <p>This analysis demonstrates how SQL can be used in real-world business scenarios for performance reporting and data-driven decisions.</p>
-
-  <h2>📎 View on GitHub</h2>
-  <p><a href="https://github.com/yourusername/pizza-sales-sql" target="_blank">Click here to view the full repository</a></p>
+  <h2> View Full Project on GitHub</h2>
+  <p><a href="https://github.com/DivyanshPoothiya/Pizza_Sales-Analysis" target="_blank">Click here to view the repository</a></p>
 </section>
 
 <footer>
-  Made by  [Divyansh Poothiya]
+  Made by [Divyansh Poothiya]
 </footer>
 
 </body>
